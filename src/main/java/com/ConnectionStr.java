@@ -12,78 +12,78 @@ import java.util.regex.Pattern;
  */
 public class ConnectionStr {
 
-    String arr[] = new String [9];
-    String input ; //ÊäÈëµÄÄÚÈİ
+    String input ; //è¾“å…¥çš„å†…å®¹
     static List<String[]> list = new ArrayList<String[]>();
     static {
-        initList();//ÊµÀı»¯×ÖÄ¸¼¯
+        initList(list);//å®ä¾‹åŒ–å­—æ¯é›†
     }
 
 
-    //ĞèÇóÒ»
+    //éœ€æ±‚ä¸€
     public String process(String input) {
-        StringBuilder output = new StringBuilder(); //ĞèÇó1Êä³öµÄÄÚÈİ
-            this.input = input;
-            if(!verification(input, null)){
-                return "";
-            }
-            input = input.replace("0", "").replace("1", "");
-            if (input.length() == 0){
-                return "";
-            }
+        StringBuilder output = new StringBuilder(); //éœ€æ±‚1è¾“å‡ºçš„å†…å®¹
+        this.input = input;
+        if(!verification(input, null)){
+            return "";
+        }
+        input = input.replace("0", "").replace("1", "");
+        if (input.length() == 0){
+            return "";
+        }
 
-            int digit = input.length(); //»ñÈ¡Î»Êı£¨³¤¶È£©
-            //»ñÈ¡Êı×Ö¶ÔÓ¦×ÖÄ¸×é
-            String [] lettters = list.get(Integer.parseInt(String.valueOf(input.charAt(0))));
-            //Ö»ÓĞÒ»Î»ÊıµÄÇé¿ö
-            if(digit == 1){
-                for (int p = 0; p < lettters.length; p++) {
-                    output.append(lettters[p]+" ");
-                }
-            }else{
-                //±éÀú×ÖÄ¸×é
-                for (int i = 0; i <lettters.length; i++) {
-                    recursion(0, lettters[i], digit-1, output);
-                }
+        int digit = input.length(); //è·å–ä½æ•°ï¼ˆé•¿åº¦ï¼‰
+        //è·å–æ•°å­—å¯¹åº”å­—æ¯ç»„
+        String [] lettters = list.get(Integer.parseInt(String.valueOf(input.charAt(0))));
+        //åªæœ‰ä¸€ä½æ•°çš„æƒ…å†µ
+        if(digit == 1){
+            for (int p = 0; p < lettters.length; p++) {
+                output.append(lettters[p]+" ");
             }
+        }else{
+            //éå†å­—æ¯ç»„
+            for (int i = 0; i <lettters.length; i++) {
+                recursion(0, lettters[i], digit-1, output);
+            }
+        }
         return output.toString().trim();
     }
 
     /**
      *
-     * µİ¹éÆ´½Ó
+     * é€’å½’æ‹¼æ¥
      *
-     * index£ºÊäÈëµÄÊı×ÖµÄÏÂ±ê
-     * appendStr ½á¹û¼¯
-     * recursionTimes µİ¹é´ÎÊı = Î»Êı -1,¼´ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»Î»Êı£¬ÓĞÔò¼ÌĞøµİ¹é
+     * indexï¼šè¾“å…¥çš„æ•°å­—çš„ä¸‹æ ‡
+     * appendStr æ‹¼æ¥å†…å®¹
+     * recursionTimes é€’å½’æ¬¡æ•° = ä½æ•° -1,å³åˆ¤æ–­æ˜¯å¦è¿˜æœ‰ä¸‹ä¸€ä½æ•°ï¼Œæœ‰åˆ™ç»§ç»­é€’å½’
+     * output ç»“æœé›†
      */
     public  void recursion(int index, String appendStr, int recursionTimes, StringBuilder output) {
         if(recursionTimes > 0 ) {
             index = index + 1;
         }
-        //»ñÈ¡ÏÂÒ»¸öÊı×Ö¶ÔÓ¦µÄ×ÖÄ¸¼¯
+        //è·å–ä¸‹ä¸€ä¸ªæ•°å­—å¯¹åº”çš„å­—æ¯é›†
         String [] lettters = list.get(Integer.parseInt(String.valueOf(input.charAt(index))));
         recursionTimes = recursionTimes - 1;
 
-        //±éÀú
+        //éå†
         for (int j = 0; j < lettters.length; j++) {
             if(recursionTimes > 0){
-                //ºóÃæ»¹ÓĞÒ»Î»
+                //åé¢è¿˜æœ‰ä¸€ä½
                 recursion(index, appendStr+lettters[j], recursionTimes, output);
             }else {
-                //Ã»ÓĞÔò½áÊøÆ´½Ó£¬¼ÓÉÏ¿Õ¸ñ
+                //æ²¡æœ‰åˆ™ç»“æŸæ‹¼æ¥ï¼ŒåŠ ä¸Šç©ºæ ¼
                 output.append(appendStr+lettters[j]+" ");
             }
         }
     }
 
     /**
-     * -----ÍØÕ¹¹¦ÄÜ-------ĞèÇó¶ş
-     * @param input ÊäÈë×Ö·û´®
-     *  Ö§³Ö0-99µÄÊı×Ö×ª»»³ÉÓ¢ÎÄ¡£
+     * -----æ‹“å±•åŠŸèƒ½-------éœ€æ±‚äºŒ
+     * @param input è¾“å…¥å­—ç¬¦ä¸²
+     *  æ”¯æŒ0-99çš„æ•°å­—è½¬æ¢æˆè‹±æ–‡ã€‚
      */
     public String process1(String input) {
-        //·Ç·¨Ğ£Ñé
+        //éæ³•æ ¡éªŒ
         if(!verification(input,"2")){
             return "";
         }
@@ -95,12 +95,12 @@ public class ConnectionStr {
             }
             result.append(" ");
         }
-//        System.out.println("ÊäÈëÊı×Ö£º"+input+" ×ª»»ºóÎª£º"+result.toString());
+//        System.out.println("è¾“å…¥æ•°å­—ï¼š"+input+" è½¬æ¢åä¸ºï¼š"+result.toString());
         return result.toString().trim();
     }
 
-    //×é×°list
-    public static void initList() {
+    //ç»„è£…list
+    public static void initList(List<String[]> list) {
         list.add(new String []{"","",""});//0
         list.add(new String []{"","",""});//1
         list.add(new String []{"A","B","C"});
@@ -114,17 +114,17 @@ public class ConnectionStr {
     }
 
     /**
-     * ÕıÔòĞ£Ñé
+     * æ­£åˆ™æ ¡éªŒ
      * @param input
-     * @param s :´Ë²ÎÊıÔÚĞèÇó¶ş·½·¨ÓÃµ½£¬±íÊ¾Ö»ÄÜÊäÈë0-99µÄÊı×Ö
-     * @return true:Ğ£Ñé³É¹¦ false£ºÊ§°Ü
+     * @param s :æ­¤å‚æ•°åœ¨éœ€æ±‚äºŒæ–¹æ³•ç”¨åˆ°ï¼Œè¡¨ç¤ºåªèƒ½è¾“å…¥0-99çš„æ•°å­—
+     * @return true:æ ¡éªŒæˆåŠŸ falseï¼šå¤±è´¥
      */
     public static boolean verification(String input, String s) {
-        //±ØĞëÊäÈë³¤¶ÈÎª0-9£¬·¶Î§Îª0-9µÄÕıÕûÊı
-        Pattern pattern = Pattern.compile("^[0-9]\\d{0,9}$");
-
+        //å¿…é¡»è¾“å…¥é•¿åº¦ä¸º0-9ï¼ŒèŒƒå›´ä¸º0-9çš„æ­£æ•´æ•°
+        Pattern pattern = Pattern.compile("^\\d{0,9}$");
+        //éœ€æ±‚äºŒ
         if(s != null){
-            pattern = Pattern.compile("^[0-2]\\d{0,9}$");
+            pattern = Pattern.compile("^\\d{0,2}$");
         }
 
         Matcher matcher = pattern.matcher(input);

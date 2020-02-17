@@ -54,12 +54,12 @@ public class ConnectionStrTest {
 
     @org.junit.Test
     public void testReatNum() {
-        assertEquals("", connstr.process1("44"));
+        assertEquals("GHI GHI", connstr.process1("44"));
     }
 
     @org.junit.Test
     public void testMax() {
-        assertEquals("", connstr.process1("99"));
+        assertEquals("WXYZ WXYZ", connstr.process1("99"));
     }
 
     @Test

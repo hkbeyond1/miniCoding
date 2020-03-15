@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://E:/HX/hxCode/SC-analysis/analysis-standard.iml" filepath="E:/HX/hxCode/SC-analysis/analysis-standard.iml" />
+      <module fileurl="file://E:/HX/hxCode/Dip-workSpace/cki-analyzeServer/cki-analyzeServer.iml" filepath="E:/HX/hxCode/Dip-workSpace/cki-analyzeServer/cki-analyzeServer.iml" />
+      <module fileurl="file://E:/HX/hxCode/Dip-workSpace/cki-commonServer/cki-commonServer.iml" filepath="E:/HX/hxCode/Dip-workSpace/cki-commonServer/cki-commonServer.iml" />
+      <module fileurl="file://E:/HX/hxCode/Dip-workSpace/cki-interfaceServer/cki-interfaceServer.iml" filepath="E:/HX/hxCode/Dip-workSpace/cki-interfaceServer/cki-interfaceServer.iml" />
+      <module fileurl="file://E:/HX/hxCode/Dip-workSpace/cki-readServer/cki-readServer.iml" filepath="E:/HX/hxCode/Dip-workSpace/cki-readServer/cki-readServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-dubbo-master/dubbo-api/dubbo-api.iml" filepath="$PROJECT_DIR$/demo-dubbo-master/dubbo-api/dubbo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-dubbo-master/dubbo-consumer/dubbo-consumer.iml" filepath="$PROJECT_DIR$/demo-dubbo-master/dubbo-consumer/dubbo-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-dubbo-master/dubbo-parent.iml" filepath="$PROJECT_DIR$/demo-dubbo-master/dubbo-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo-dubbo-master/dubbo-provider/dubbo-provider.iml" filepath="$PROJECT_DIR$/demo-dubbo-master/dubbo-provider/dubbo-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/idea-workplace.iml" filepath="$PROJECT_DIR$/idea-workplace.iml" />
+      <module fileurl="file://E:/myStudyCode/myCode-HX/otherPoject/otherPoject.iml" filepath="E:/myStudyCode/myCode-HX/otherPoject/otherPoject.iml" />
+      <module fileurl="file://E:/myStudyCode/myCode-HX/springPoject/springPoject.iml" filepath="E:/myStudyCode/myCode-HX/springPoject/springPoject.iml" />
+      <module fileurl="file://E:/myStudyCode/myCode-HX/springTest/springTest.iml" filepath="E:/myStudyCode/myCode-HX/springTest/springTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" filepath="$PROJECT_DIR$/springbootMybatis/springbootMybatis.iml" />
+    </modules>
+  </component>
+</project>

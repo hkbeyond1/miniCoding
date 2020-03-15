@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="miniCoding" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="com.consumer" target="1.5" />
+      <module name="com.provider" target="1.5" />
+      <module name="dubbo-api" target="1.5" />
+      <module name="dubbo-consumer" target="1.5" />
+      <module name="dubbo-parent" target="1.5" />
+      <module name="dubbo-provider" target="1.5" />
+      <module name="dubbo.parent" target="1.5" />
+      <module name="dubbo_api" target="1.5" />
+      <module name="idea-workplace" target="1.7" />
+      <module name="JmeterTest" target="1.6" />
+      <module name="springbootMybatis" target="1.6" />
+      <module name="springcloudConsumer" target="1.7" />
+      <module name="springcloudPro" target="1.8" />
+      <module name="springcloudServer" target="1.8" />
+      <module name="springcloudTest" target="1.5" />
+      <module name="TestJVM" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

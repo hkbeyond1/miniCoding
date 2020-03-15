@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="E:/HX/hxCode/Dip-workSpace/cki-analyzeServer" vcs="svn" />
+    <mapping directory="E:/HX/hxCode/Dip-workSpace/cki-commonServer" vcs="svn" />
+    <mapping directory="E:/HX/hxCode/Dip-workSpace/cki-interfaceServer" vcs="svn" />
+    <mapping directory="E:/HX/hxCode/Dip-workSpace/cki-readServer" vcs="svn" />
+    <mapping directory="E:/HX/hxCode/SC-analysis" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/sso" vcs="Git" />
+  </component>
+</project>
